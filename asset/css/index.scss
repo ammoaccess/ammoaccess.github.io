@@ -1,0 +1,402 @@
+// common stylesheet
+body {
+  background-color: black;
+}
+// color
+* {
+  --white: #ffffff;
+  --light-yellow: #d0a138;
+  --dark-yellow: #b88f2f;
+  --yellow-orange: #fba002;
+  --light-gray: #f2f2f2;
+  --gray: #dadada;
+  --dark-gray: #a6a6a6;
+  --black-table-th: #161207;
+  --black-btn-table: #100f0d;
+  --green: #218733;
+  --red: #d00000;
+  --black-icon: #222222;
+  font-size: 18px;
+  font-family: ProximaNova;
+  color: var(--white);
+}
+
+
+// background color
+.bg-light-yellow {
+  background-color: var(--light-yellow) !important;
+}
+.bg-dark-yellow {
+  background-color: var(--dark-yellow) !important;
+}
+.bg-yellow-orange {
+  background-color: var(--yellow-orange) !important;
+}
+.bg-light-gray {
+  background-color: var(--light-gray) !important;
+}
+.bg-gray {
+  background-color: var(--gray) !important;
+}
+.bg-black-table-th {
+  background-color: var(--black-table-th) !important;
+}
+.bg-black-btn-table {
+  background-color: var(--black-btn-table) !important;
+}
+
+// font color
+.text-light-yellow {
+  color: var(--light-yellow) !important;
+}
+.text-dark-yellow {
+  color: var(--dark-yellow) !important;
+}
+.text-yellow-orange {
+  color: var(--yellow-orange) !important;
+}
+.text-dark-gray {
+  color: var(--dark-gray) !important;
+}
+
+// form control
+.form-ctrl {
+  height: 42px;
+  border: 1px solid #979797;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-family: ProximaNova;
+  font-size: 77.7777%;
+  padding: 10px 20px;
+  outline: none;
+}
+
+//select Price
+.select-price {
+  opacity: 1 !important;
+  font-size: 88.8888% !important;
+  outline: none;
+}
+
+//paging
+.paging-btn {
+  background-color: black;
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid var(--white);
+  margin: 0 7px;
+  font-family: Roboto;
+  font-size: 83.3333%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .1s;
+}
+.paging-btn.active,
+.paging-btn:hover {
+  background-color: var(--yellow-orange);
+}
+
+//button basic
+.btn-basic {
+  background-color: var(--light-yellow);
+  border: 1px solid #b78413;
+  box-sizing: border-box;
+  height: 42px;
+  width: 168px;
+  font-family: Impact;
+  font-size: 100%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+// social link
+.social-link {
+  background-color: var(--light-yellow);
+  border-radius: 4px;
+  margin: 6px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+// price tag
+.price-tag {
+  background-color: var(--yellow-orange);
+  color: var(--white);
+  width: 76px;
+  height: 32px;
+  font-family: ProximaNova;
+  font-size: 77.7777%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//radius
+.radius-4 {
+  border-radius: 4px;
+}
+.radius-2 {
+  border-radius: 2px;
+}
+//subtitle
+.sub-title {
+  font-family: ProximaNova;
+  font-size: 66.6666%;
+  color: var(--light-yellow);
+}
+
+//text title
+.text-title {
+  font-family: ProximaNova;
+  font-size: 100%;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+//dash
+.dash-short {
+  position: relative;
+  width: 100%;
+}
+.dash-short::before{
+  content: '';
+  height: 2px;
+  width: 25px;
+  background-color: var(--light-yellow);
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+}
+.dash-long {
+  height: 2px;
+  width: 100px;
+  color: var(--light-yellow);
+  text-align: center;
+}
+
+//button table
+.btn-steel {
+  width: 55px;
+  background-color: #100f0d;
+  border-radius: 1px solid #939393;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: var(--dark-yellow);
+  font-size: 77.7777%;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-brass {
+  width: 55px;
+  background-color: var(--white);
+  border: 1px solid #939393;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: var(--yellow-orange);
+  font-size: 77.7777%;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-login {
+  width: 168px;
+}
+
+.bg-custom {
+  background-image: url("../images/bg-custom.svg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.btn-dot{
+  background-image: url("../images/line-dot.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-color: #6E5315;
+  color: var(--dark-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--light-yellow);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 6px #AC852D;
+  cursor: pointer;
+  font-family: Impact;
+  text-transform: uppercase;
+}
+.btn-dot:hover{
+  background-image: url("../images/line-dot.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: repeat-x;
+  color: var(--dark-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--light-yellow);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 6px #AC852D;
+  cursor: pointer;
+  font-family: Impact;
+  text-transform: uppercase;
+}
+.text-impact{
+  font-family: Impact !important;
+}
+
+.text-nova{
+  font-family: ProximaNova !important;
+}
+
+.text-12{
+  font-size: 66.6666% !important;
+}
+
+.text-14{
+  font-size: 77.7777% !important;
+}
+
+.text-15{
+  font-size: 83.3333% !important;
+}
+
+.text-16{
+  font-size: 88.8888% !important;
+}
+
+.text-18{
+  font-size: 100% !important;
+}
+
+.text-24{
+  font-size: 133.3333% !important;
+}
+
+.text-30{
+  font-size: 166.6666% !important;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  padding: 0 !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: var(--white);
+  height: 42px;
+  font-size: 14px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px !important;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: black transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  padding: 8px 16px;
+  border: 1px solid #979797;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: var(--white);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+// header 
+#menu{
+  min-height: 71px;
+  z-index: 99999999;
+}
+
+.un-list{
+  list-style: none;
+  padding: 0;
+}
+.item-link{
+  color: var(--white);
+  text-decoration: none !important;
+}
+.item-link:hover{
+  color: var(--white);
+  text-decoration: none !important;
+}
+// common media stylesheet
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advantage Search</title>
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../asset/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../asset/css/advantage_search/advantage_search.css"
+    />
+  </head>
+  <body>
+    <!-- your code below this line -->
+    <p data-toggle="modal" data-target="#search">ADVANCED SEARCH</p>
+    <!-- popup search -->
+    <div class="modal fade" id="search" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div
+            class="modal-header bg-custom pl-3 pr-3 pt-0 pb-0 d-flex align-items-center"
+          >
+            <p
+              class="modal-title text-light-yellow text-24 text-uppercase text-impact"
+            >
+              Ammo Advanced search
+            </p>
+            <button
+              type="button "
+              class="close text-white"
+              data-dismiss="modal"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-body text-14">
+            <div class="d-flex align-items-center justify-content-between">
+              <label class="mb-0 text-black">Ammo Type</label>
+              <div class="col-8 p-0 custom-select form-ctrl">
+                <select>
+                  <option value="0">Handgun</option>
+                  <option value="1">Handgun</option>
+                  <option value="2">Handgun</option>
+                  <option value="3">Handgun</option>
+                </select>
+              </div>
+            </div>
+
+            <div
+              class="d-flex align-items-center margin-select justify-content-between"
+            >
+              <label class="mb-0 text-black">Caliber</label>
+              <div class="col-8 p-0 custom-select form-ctrl">
+                <select>
+                  <option value="0">Any</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center margin-select justify-content-between"
+            >
+              <label class="mb-0 text-black">Manufacture</label>
+              <div class="col-8 p-0 custom-select form-ctrl">
+                <select>
+                  <option value="0">Any</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center margin-select justify-content-between"
+            >
+              <label class="mb-0 text-black">Grain Weight</label>
+              <div class="col-8 p-0 custom-select form-ctrl">
+                <select>
+                  <option value="0">Any</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center margin-select justify-content-between"
+            >
+              <label class="mb-0 text-black">Keywords</label>
+              <div class="col-8 p-0">
+                <input
+                  class="form-ctrl radius-2"
+                  placeholder="Match these words in search"
+                />
+              </div>
+            </div>
+            <hr />
+            <div class="d-flex align-items-center">
+              <p class="text-18 text-light-yellow mb-0 mr-1 text-uppercase">
+                advanced search
+              </p>
+
+              <a data-toggle="collapse" data-target="#content">
+                <img
+                  src="../asset/images/arrow.png"
+                  class="text-black"
+                  style="width: 13px; height: 8px;"
+                />
+              </a>
+            </div>
+            <div class="collapse" id="content">
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Keywords</label>
+                <div class="col-8 p-0">
+                  <input
+                    class="form-ctrl radius-2"
+                    placeholder="Execlude these words in search"
+                  />
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Number of Rounds</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">Any</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Purchase Limits</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">Show items with purchase limits</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Condition</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">Any</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Case Material</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">Any</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Shipping</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">Show all</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Show blank?</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">No, hide blanks</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center margin-select justify-content-between"
+              >
+                <label class="mb-0 text-black">Sort by</label>
+                <div class="col-8 p-0 custom-select form-ctrl">
+                  <select>
+                    <option value="0">Price/round</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="btn-basic margin-btn text-uppercase">
+                  seeking now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- popup search -->
+    <!-- your code above this line -->
+    <script src="../../asset/js/index.js"></script>
+    <script src="../../asset/js/advantage_search/advantage_search.js"></script>
+  </body>
+</html>

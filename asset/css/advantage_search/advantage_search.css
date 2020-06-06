@@ -1,0 +1,31 @@
+.modal-content {
+  border: none;
+  font-weight: bold;
+}
+
+.modal-header {
+  background-color: black;
+  height: 70px;
+}
+
+.margin-select {
+  margin-top: 20px;
+}
+
+hr {
+  color: var(--light-yellow);
+  background-color: var(--light-yellow);
+  opacity: 0.5;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+}
+
+.margin-btn {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=advantage_search.css.map */
