@@ -1,5 +1,11 @@
 // advantage search stylesheet
 // /modal
+* {
+  font-weight: 500;
+}
+a {
+  cursor: pointer;
+}
 .modal-content {
   border: none;
   font-weight: bold;
@@ -26,9 +32,15 @@ input {
   margin-top: 35px;
   margin-bottom: 20px;
 }
+.custom-select {
+  font-weight: bold !important;
+}
 // advantage search media stylesheet
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .modal-dialog.modal-lg {
+    margin: 3rem;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)

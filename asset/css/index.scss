@@ -15,12 +15,14 @@ body {
   --black-btn-table: #100f0d;
   --green: #218733;
   --red: #d00000;
+  --black: #000000;
   --black-icon: #222222;
+  --black-text-table: #030303;
   font-size: 18px;
+  font-weight: 500 !important;
   font-family: ProximaNova;
   color: var(--white);
 }
-
 
 // background color
 .bg-light-yellow {
@@ -58,6 +60,12 @@ body {
 .text-dark-gray {
   color: var(--dark-gray) !important;
 }
+.text-black {
+  color: var(--black);
+}
+.text-table {
+  color: var(--black-text-table);
+}
 
 // form control
 .form-ctrl {
@@ -80,7 +88,7 @@ body {
 
 //paging
 .paging-btn {
-  background-color: black;
+  background-color: var(--black);
   color: var(--white);
   width: 40px;
   height: 40px;
@@ -94,7 +102,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: .1s;
+  transition: 0.1s;
 }
 .paging-btn.active,
 .paging-btn:hover {
@@ -151,6 +159,9 @@ body {
 .radius-2 {
   border-radius: 2px;
 }
+.radius-6 {
+  border-radius: 6px;
+}
 //subtitle
 .sub-title {
   font-family: ProximaNova;
@@ -162,7 +173,6 @@ body {
 .text-title {
   font-family: ProximaNova;
   font-size: 100%;
-  text-transform: uppercase;
   color: var(--white);
 }
 
@@ -171,21 +181,21 @@ body {
   position: relative;
   width: 100%;
 }
-.dash-short::before{
-  content: '';
+.dash-short::before {
+  content: "";
   height: 2px;
   width: 25px;
   background-color: var(--light-yellow);
   position: absolute;
   left: 0;
-  bottom: -11px;
+  bottom: -6px;
 }
 .dash-short-top {
   position: relative;
   width: 100%;
 }
-.dash-short-top::before{
-  content: '';
+.dash-short-top::before {
+  content: "";
   height: 2px;
   width: 25px;
   background-color: var(--light-yellow);
@@ -199,12 +209,12 @@ body {
   text-align: center;
 }
 
-.dash-long::before{
-  content: '';
+.dash-long::before {
+  content: "";
   background-color: var(--light-yellow);
   position: absolute;
-  left: 50% ;
-  bottom: -11px;
+  left: 50%;
+  bottom: -10px;
   transform: translateX(-50%);
   height: 2px;
   width: 100px;
@@ -247,24 +257,26 @@ body {
   background-size: cover;
 }
 
-.btn-dot{
+.btn-dot {
   background-image: url("../images/line-dot.svg");
   background-position: center center;
   background-size: cover;
   background-repeat: repeat-x;
-  background-color: #6E5315;
+  background-color: #6e5315;
   color: var(--dark-gray);
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--light-yellow);
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 6px #AC852D;
+  box-shadow: inset 0px 0px 6px #ac852d;
   cursor: pointer;
   font-family: Impact;
   text-transform: uppercase;
+  white-space: nowrap;
+  padding: 8px 20px;
 }
-.btn-dot:hover{
+.btn-dot:hover {
   background-image: url("../images/line-dot.svg");
   background-position: center center;
   background-size: cover;
@@ -275,44 +287,44 @@ body {
   align-items: center;
   border: 1px solid var(--light-yellow);
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 6px #AC852D;
+  box-shadow: inset 0px 0px 6px #ac852d;
   cursor: pointer;
   font-family: Impact;
   text-transform: uppercase;
 }
-.text-impact{
+.text-impact {
   font-family: Impact !important;
 }
 
-.text-nova{
+.text-nova {
   font-family: ProximaNova !important;
 }
 
-.text-12{
+.text-12 {
   font-size: 66.6666% !important;
 }
 
-.text-14{
+.text-14 {
   font-size: 77.7777% !important;
 }
 
-.text-15{
+.text-15 {
   font-size: 83.3333% !important;
 }
 
-.text-16{
+.text-16 {
   font-size: 88.8888% !important;
 }
 
-.text-18{
+.text-18 {
   font-size: 100% !important;
 }
 
-.text-24{
+.text-24 {
   font-size: 133.3333% !important;
 }
 
-.text-30{
+.text-30 {
   font-size: 166.6666% !important;
 }
 
@@ -347,21 +359,23 @@ body {
   width: 0;
   height: 0;
   border: 6px solid transparent;
-  border-color: black transparent transparent transparent;
+  border-color: var(--black) transparent transparent transparent;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+  // border-color: transparent transparent #fff transparent;
+  top: 11px;
+  transform: rotate(180deg);
 }
 
 /*style the items (options), including the selected item:*/
 .select-items div,
 .select-selected {
+  font-size: 14px;
   padding: 8px 16px;
   border: 1px solid #979797;
-  color: black;
+  color: var(--black);
   cursor: pointer;
   user-select: none;
 }
@@ -385,50 +399,195 @@ body {
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-// header 
-#menu{
-  min-height: 71px;
+// header
+#menu {
   z-index: 99999999;
 }
 
-.un-list{
+.un-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.item-link{
+.item-link {
   color: var(--white);
   text-decoration: none !important;
 }
-.item-link:hover{
+.item-link:hover {
   color: var(--white);
   text-decoration: none !important;
 }
-.carousel-caption{
+.carousel-caption {
   top: 50%;
   transform: translateY(-50%);
   bottom: unset;
+  h1 {
+    opacity: 0.8;
+  }
+  p {
+    opacity: 0.8;
+  }
 }
-.carousel-caption p{
+.carousel-caption p {
   width: 47.5%;
+}
+#icon-updown {
+  transform: rotate(180deg);
+}
+#icon-updown.show {
+  transform: rotate(0deg);
+}
+.show-more {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.border-top-custom {
+  position: relative;
+}
+
+.border-top-custom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(
+    -90deg,
+    rgba(208, 161, 56, 0),
+    rgba(208, 161, 56, 1),
+    rgba(208, 161, 56, 0)
+  );
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+footer .text-title {
+  opacity: 0.8;
+}
+footer .un-list {
+  opacity: 0.6;
+}
+.carousel-back {
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.sub-banner-back {
+  height: 20vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 // common media stylesheet
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  * {
+    font-size: 12px;
+  }
+  .sub-banner-content {
+    width: 100% !important;
+  }
+  .carousel-back {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  .carousel-caption p {
+    width: 100%;
+  }
+  .carousel-caption {
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .follow-us {
+    text-align: center;
+    .dash-short-top::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .sub-banner-content {
+    width: 100% !important;
+  }
+  .carousel-back {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  .carousel-caption p {
+    width: 100%;
+  }
+  .follow-us {
+    text-align: center;
+    .dash-short-top::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .sub-banner-content {
+    width: 100% !important;
+  }
+  .carousel-back {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+  .carousel-caption p {
+    width: 100%;
+  }
+  .follow-us {
+    text-align: center;
+    .dash-short-top::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+.star-rating {
+  line-height:32px;
+  font-size:1.25em;
 }
 
+.fa-star-o{color: #FBA002;}
+.star-rating{
+  white-space: nowrap;
+  .fa-star{color: #FBA002;}
+} 
+.checked {
+  color: #FBA002;
+}
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  button.navbar-toggler{
+  button.navbar-toggler {
     display: none !important;
+  }
+  .carousel-back {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
   }
 }
 

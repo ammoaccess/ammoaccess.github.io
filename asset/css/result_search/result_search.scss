@@ -1,20 +1,121 @@
 // result search stylesheet
+.mt31 {
+  margin-top: 31px;
+}
+.mt34 {
+  margin-top: 34px;
+}
+.mt25 {
+  margin-top: 25px;
+}
+.mt27 {
+  margin-top: 27px;
+}
+.mt52 {
+  margin-top: 52px;
+}
+.mr14 {
+  margin-right: 14px;
+}
+hr {
+  background: radial-gradient(
+    421.73% 12031.93% at 50% 1.75%,
+    #d0a138 0%,
+    #000000 100%
+  );
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  height: 1px;
+}
+
+.custom-select {
+  width: 221px;
+}
+.btn-dot {
+  width: 218px;
+}
+.btn-dot.btn-search {
+  display: none;
+}
+
+.table thead th {
+  border-bottom: 0 !important;
+  text-transform: uppercase;
+}
+.table td,
+.table th {
+  border-top: 0 !important;
+  padding: 15px !important;
+}
+.td-center {
+  vertical-align: inherit !important;
+}
+.btn-edit {
+  width: 32px;
+  height: 32px;
+}
+.widthDesc {
+  width: 25%;
+}
+.pointer {
+  cursor: pointer;
+}
 
 // result search media stylesheet
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-select {
+    width: 100px;
+  }
+  .content-start {
+    display: flex !important;
+    justify-content: start !important;
+    margin-top: 15px;
+  }
+  .btn-dot {
+    display: none;
+  }
+  .btn-dot.btn-search {
+    display: block;
+    width: fit-content;
+  }
+  .scroll-x {
+    overflow-x: scroll;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-start {
+    display: flex !important;
+    justify-content: start !important;
+    margin-top: 15px;
+  }
+  .scroll-x {
+    overflow-x: scroll;
+  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .scroll-x {
+    overflow-x: scroll;
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .scroll-x {
+    overflow-x: scroll;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)

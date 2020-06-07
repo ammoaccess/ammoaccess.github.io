@@ -113,14 +113,19 @@
             </div>
             <hr />
             <div class="d-flex align-items-center">
-              <p class="text-18 text-light-yellow mb-0 mr-1 text-uppercase">
-                advanced search
-              </p>
-
-              <a data-toggle="collapse" data-target="#content">
+              <a
+                data-toggle="collapse"
+                data-target="#content"
+                onclick="toogleIconUpDown()"
+              >
+                <span
+                  class="text-18 text-light-yellow mb-0 mr-2 text-uppercase"
+                >
+                  advanced search
+                </span>
                 <img
-                  src="../asset/images/arrow.png"
-                  class="text-black"
+                  src="../../asset/images/arrow.png"
+                  id="icon-updown"
                   style="width: 13px; height: 8px;"
                 />
               </a>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gun Result Search</title>
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../asset/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../asset/css/result_search/result_search.css"
+    />
+  </head>
+  <body>
+    <!-- your code below this line -->
+    <!-- header -->
+    <header>
+      <!-- menu -->
+      <div id="menu" class="bg-custom">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand pt-0" href="#">
+            <img src="../../asset/images/site-name.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler btn-dot"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item px-lg-3">
+                <a
+                  class="nav-link text-dark-gray text-impact text-uppercase"
+                  href="#"
+                  >DEALS/COUPONS</a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a
+                  class="nav-link text-dark-gray text-impact text-uppercase"
+                  href="#"
+                  >Help</a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a
+                  class="nav-link text-dark-gray text-impact text-uppercase"
+                  href="#"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item px-lg-3">
+                <a
+                  class="nav-link text-dark-gray text-impact text-uppercase"
+                  href="#"
+                  >Calculator</a
+                >
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <button class="btn btn-dot btn-login my-2 my-sm-0" type="submit">
+                LOGIN
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- /menu -->
+      <!-- banner -->
+      <div class="banner">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="../../asset/images/ammo-result/banner-ammo-result.png"
+                alt="First slide"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <p class="text-uppercase text-16 mb-0">
+                  We invite you to kick the tires and have a look around. If you
+                  notice anything that is broken or doesn't look right on your
+                  device, please.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /banner -->
+    </header>
+    <!-- content -->
+    <div class="container">
+      <div class="col-12">
+        <div class="text-uppercase dash-short text-18 mt34">
+          ammo results
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-between mt31 flexColumn">
+        <div class="d-flex align-items-center">
+          <p class="text-14 mb-0">
+            Showing <span class="text-light-yellow"> 1032 </span> results
+          </p>
+        </div>
+        <div
+          class="d-flex justify-content-end align-items-center content-start"
+        >
+          <p class="text-14 mb-0 mr-2 text-nowrap">Sort by</p>
+          <input
+            class="form-ctrl text-black font-weight-bold"
+            type="text"
+            value="Price"
+          />
+        </div>
+      </div>
+      <!-- table -->
+      <div class="col-12 mt25">
+        <div class="col-12 p-0 scroll-x">
+          <table class="table table-striped mb-0">
+            <thead class="bg-black-table-th">
+              <tr>
+                <th class="text-light-yellow text-14">Retailer</th>
+                <th class="text-light-yellow text-14 widthDesc">Description</th>
+                <th class="text-light-yellow text-14">Mfg</th>
+                <th class="text-light-yellow text-14">Caliber</th>
+                <th class="text-light-yellow text-14">When</th>
+                <th class="text-light-yellow text-14">Price</th>
+                <th class="text-light-yellow text-14">Share</th>
+                <th class="text-light-yellow text-14">Err?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  SCCY CPX-3 Replacement Magazine 03006 85765632465
+                </td>
+                <td class="text-table text-14 td-center">SCCY</td>
+                <td class="text-table text-14 td-center">.380 AUto</td>
+                <td class="text-table text-14 td-center">2m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/flag.png" />
+                </td>
+              </tr>
+              <tr class="bg-light-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">Winchester</td>
+                <td class="text-table text-14 td-center">9mm Luger</td>
+                <td class="text-table text-14 td-center">31s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/flag.png" />
+                </td>
+              </tr>
+              <tr class="bg-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">Winchester</td>
+                <td class="text-table text-14 td-center">.380 AUto</td>
+                <td class="text-table text-14 td-center">1m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/error.png" />
+                </td>
+              </tr>
+              <tr class="bg-light-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Bass Pro
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star-less.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">ATI</td>
+                <td class="text-table text-14 td-center">.380 AUto</td>
+                <td class="text-table text-14 td-center">2m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/flag.png" />
+                </td>
+              </tr>
+              <tr class="bg-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">Winchester</td>
+                <td class="text-table text-14 td-center">.380 AUto</td>
+                <td class="text-table text-14 td-center">2m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/flag.png" />
+                </td>
+              </tr>
+              <tr class="bg-light-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">ATI</td>
+                <td class="text-table text-14 td-center">9mm Luger</td>
+                <td class="text-table text-14 td-center">31s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/error.png" />
+                </td>
+              </tr>
+              <tr class="bg-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">Winchester</td>
+                <td class="text-table text-14 td-center">.380 AUto</td>
+                <td class="text-table text-14 td-center">1m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/flag.png" />
+                </td>
+              </tr>
+              <tr class="bg-light-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Bass Pro
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star-less.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">ATI</td>
+                <td class="text-table text-14 td-center">9mm Luger</td>
+                <td class="text-table text-14 td-center">2m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/error.png" />
+                </td>
+              </tr>
+              <tr class="bg-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Natchez Shooters Supplies
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  SCCY CPX-3 Replacement Magazine 03006 85765632465
+                </td>
+                <td class="text-table text-14 td-center">SCCY</td>
+                <td class="text-table text-14 td-center">.380 AUto</td>
+                <td class="text-table text-14 td-center">2m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/flag.png" />
+                </td>
+              </tr>
+              <tr class="bg-light-gray pointer">
+                <td>
+                  <div class="text-table text-14">
+                    Bass Pro
+                  </div>
+                  <div class="d-flex">
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star.png" />
+                    <img src="../../asset/images/star-less.png" />
+                  </div>
+                </td>
+                <td class="text-table text-14">
+                  9mm Winchester USA Forged Handgun Ammo 115 Grain WIN9SK
+                </td>
+                <td class="text-table text-14 td-center">Winchester</td>
+                <td class="text-table text-14 td-center">9mm Luger</td>
+                <td class="text-table text-14 td-center">2m6s</td>
+                <td class="text-table text-14 td-center font-weight-bold">
+                  $164.99
+                </td>
+
+                <td class="td-center">
+                  <div
+                    class="bg-black-btn-table radius-6 btn-edit d-flex justify-content-center align-items-center"
+                  >
+                    <img src="../../asset/images/gun-result/edit.png" />
+                  </div>
+                </td>
+                <td class="text-center td-center">
+                  <img src="../../asset/images/gun-result/error.png" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- hr -->
+      <div class="col-12 p-0 mt27">
+        <hr />
+      </div>
+      <!-- /hr -->
+      <!-- paging -->
+      <div class="col-12 d-flex justify-content-center">
+        <div class="paging-btn mr14 active">1</div>
+        <div class="paging-btn mr14">2</div>
+        <div class="paging-btn mr14">3</div>
+        <div class="paging-btn mr14">></div>
+        <div class="paging-btn">>></div>
+      </div>
+      <!-- /paging -->
+    </div>
+    <!-- /content -->
+    <!-- hr -->
+    <div class="col-12 p-0 mt52">
+      <hr />
+    </div>
+    <!-- /hr -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container pt-4">
+        <div class="row">
+          <div class="col-12 col-lg-4 d-flex flex-column justify-content-end">
+            <div class="download-app">
+              <img
+                class="mr-3"
+                src="../../asset/images/google-play.svg"
+                alt=""
+              />
+              <img class="mr-3" src="../../asset/images/app-store.svg" alt="" />
+            </div>
+            <br />
+            <div class="follow-us">
+              <div class="text-16 dash-short-top">
+                Follow us
+              </div>
+              <div class="d-flex">
+                <div class="social-link mt-2 ml-0">
+                  <img src="../../asset/images/fb-icon.png" />
+                </div>
+                <div class="social-link mt-2">
+                  <img src="../../asset/images/tweeter-icon.png" />
+                </div>
+                <div class="social-link mt-2">
+                  <img src="../../asset/images/instagram-icon.png" />
+                </div>
+                <div class="social-link mt-2">
+                  <img src="../../asset/images/email-icon.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2">
+            <div class="text-title dash-short text-16">
+              Help
+            </div>
+            <br />
+            <ul class="un-list">
+              <li><a href="" class="item-link text-14">Home</a></li>
+              <li><a href="" class="item-link text-14">Blog</a></li>
+              <li><a href="" class="item-link text-14">FAQ</a></li>
+              <li><a href="" class="item-link text-14">About Us</a></li>
+              <li><a href="" class="item-link text-14">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-2">
+            <div class="text-title dash-short text-16">
+              Useful links
+            </div>
+            <br />
+            <ul class="un-list">
+              <li>
+                <a href="" class="item-link text-14">Banner Advertising</a>
+              </li>
+              <li>
+                <a href="" class="item-link text-14">Get Listed (Retailers)</a>
+              </li>
+              <li>
+                <a href="" class="item-link text-14">Retailers Ratings</a>
+              </li>
+              <li>
+                <a href="" class="item-link text-14">Details & Coupons</a>
+              </li>
+              <li><a href="" class="item-link text-14">Calibers List</a></li>
+              <li>
+                <a href="" class="item-link text-14">Friends / Partners</a>
+              </li>
+              <li>
+                <a href="" class="item-link text-14">Swag / Merchandise</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-2">
+            <div class="text-title dash-short text-16">
+              Other
+            </div>
+            <br />
+            <ul class="un-list">
+              <li><a href="" class="item-link text-14">Privacy Policy</a></li>
+              <li><a href="" class="item-link text-14">Terms Of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        <span class="text-14">© 2020 Copyright. All rights reserved by</span
+        ><span class="text-light-yellow text-14"> AmmoAccess.com</span>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- your code above this line -->
+    <script src="../../asset/js/index.js"></script>
+    <script src="../../asset/js/result_search/result_search.js"></script>
+  </body>
+</html>

@@ -1,3 +1,11 @@
+* {
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+}
+
 .modal-content {
   border: none;
   font-weight: bold;
@@ -27,5 +35,15 @@ input {
 .margin-btn {
   margin-top: 35px;
   margin-bottom: 20px;
+}
+
+.custom-select {
+  font-weight: bold !important;
+}
+
+@media (max-width: 575.98px) {
+  .modal-dialog.modal-lg {
+    margin: 3rem;
+  }
 }
 /*# sourceMappingURL=advantage_search.css.map */
