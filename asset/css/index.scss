@@ -180,11 +180,34 @@ body {
   left: 0;
   bottom: -11px;
 }
+.dash-short-top {
+  position: relative;
+  width: 100%;
+}
+.dash-short-top::before{
+  content: '';
+  height: 2px;
+  width: 25px;
+  background-color: var(--light-yellow);
+  position: absolute;
+  left: 0;
+  top: -11px;
+}
 .dash-long {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.dash-long::before{
+  content: '';
+  background-color: var(--light-yellow);
+  position: absolute;
+  left: 50% ;
+  bottom: -11px;
+  transform: translateX(-50%);
   height: 2px;
   width: 100px;
-  color: var(--light-yellow);
-  text-align: center;
 }
 
 //button table
@@ -371,6 +394,7 @@ body {
 .un-list{
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .item-link{
   color: var(--white);
@@ -379,6 +403,14 @@ body {
 .item-link:hover{
   color: var(--white);
   text-decoration: none !important;
+}
+.carousel-caption{
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: unset;
+}
+.carousel-caption p{
+  width: 47.5%;
 }
 // common media stylesheet
 // Extra small devices (portrait phones, less than 576px)
@@ -395,6 +427,9 @@ body {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  button.navbar-toggler{
+    display: none !important;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)

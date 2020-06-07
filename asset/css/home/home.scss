@@ -1,5 +1,18 @@
 // home stylesheet
-
+.search-caliber-form{
+width: 50%;
+position: relative;
+}
+.search-caliber-form .form-ctrl{
+    width: 100%;
+    color: black;
+    font-size: 88.8888% !important;
+}
+.search-caliber-form button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 // home media stylesheet
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
